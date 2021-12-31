@@ -26,7 +26,6 @@ public class translateActivity extends AppCompatActivity {
         clipboardManager = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
 
         if(getIntent().hasExtra("translation")  ){
-            txt=getIntent().getStringExtra("translation");
         }
 
         if(!clipboardManager.hasPrimaryClip()){
