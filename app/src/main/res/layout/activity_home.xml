@@ -9,44 +9,41 @@
 
     <Spinner
         android:id="@+id/spinner"
-        android:layout_width="0dp"
+        android:layout_width="136dp"
         android:layout_height="41dp"
-        android:layout_marginStart="45dp"
-        android:layout_marginEnd="55dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="52dp"
+        android:background="@color/white"
         android:entries="@array/lang"
-        app:layout_constraintBaseline_toBaselineOf="@+id/spinner2"
         app:layout_constraintEnd_toStartOf="@+id/spinner2"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
         android:id="@+id/spinner2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="136dp"
+        android:layout_height="41dp"
         android:layout_marginTop="108dp"
-        android:layout_marginEnd="39dp"
-        android:layout_marginBottom="35dp"
+        android:layout_marginEnd="36dp"
+        android:background="@color/white"
         android:entries="@array/lang"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextMultiLine"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/spinner"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextTextMultiLine"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="38dp"
-        android:layout_marginEnd="38dp"
-        android:layout_marginBottom="367dp"
+        android:layout_width="335dp"
+        android:layout_height="178dp"
+        android:layout_marginBottom="127dp"
+        android:background="@color/white"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner2" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="422dp"
         android:layout_height="227dp"
         android:background="@drawable/white_backg"
@@ -66,4 +63,25 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
     </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/pastebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="17dp"
+        app:layout_constraintEnd_toStartOf="@+id/copy"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine"
+        app:srcCompat="@drawable/ic_baseline_content_paste_24" />
+
+    <ImageButton
+        android:id="@+id/copy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="224dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine"
+        app:srcCompat="@drawable/ic_baseline_content_copy_24" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
