@@ -39,6 +39,7 @@ public class translateActivity extends AppCompatActivity {
                     ClipData clipData = ClipData.newPlainText("text",text);
                     clipboardManager.setPrimaryClip(clipData);
                     Toast.makeText(translateActivity.this, "copied!", Toast.LENGTH_SHORT).show();
+
                 }
 
             }
