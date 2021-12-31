@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -105,6 +106,9 @@ public class HomeActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<List<modelClass>> call, Response<List<modelClass>> response) {
                         Toast.makeText(HomeActivity.this, "everthong is ok !"+ response.toString(), Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(HomeActivity.this,translateActivity.class);
+                        intent.putExtra("translation",response.body().toString());
+                        startActivity(intent);
 
                     }
 
